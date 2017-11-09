@@ -1,7 +1,7 @@
 package pl.waw.sgh;
 
 public class Email {
-    static char[] specialChars = new char[] {'!', '#', '$', '%', '^', '&', '*', '(', ')', '-', '/', '~', '[', ']'} ;
+    static char[] specialCharacters = new char[] {'!', '#', '$', '%', '^', '&', '*', '(', ')', '-', '/', '~', '[', ']'} ;
 
     public static void main(String[] args) {
         final String EMAIL = "abasdasd_@asaf.pl";
@@ -24,8 +24,8 @@ public class Email {
     }
 
     public static boolean checkAddress(String address){
-        for (int i=0; i<specialChars.length; i++) {
-            if (address.indexOf(specialChars[i]) > 0) {
+        for (int i = 0; i< specialCharacters.length; i++) {
+            if (address.indexOf(specialCharacters[i]) > 0) {
                 return false;
             }
         }
@@ -37,8 +37,8 @@ public class Email {
                 && domain.indexOf('.') > 0
                 && domain.charAt(domain.length()-1) != '.'
                 && domain.indexOf('@') == 0) {
-            for (int i=0; i<specialChars.length; i++) {
-                if (domain.indexOf(specialChars[i]) > 0) {
+            for (int i = 0; i< specialCharacters.length; i++) {
+                if (domain.indexOf(specialCharacters[i]) > 0) {
                     return false;
                 }
             }
