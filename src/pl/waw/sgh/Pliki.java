@@ -5,7 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Pliki {
-    static final String PLIK = "plik.txt";
+    //static final String PLIK = "plik.txt";
+    static final String PLIK = "cdr.csv";
 
     public static void main(String[] args) /*throws FileNotFoundException*/ {
         File file = new File(PLIK);
@@ -26,6 +27,11 @@ public class Pliki {
             while (scanner.hasNext()) {
                 String linia = scanner.nextLine();
                 System.out.println(linia);
+                String[] elementy = linia.split(",");
+                for (String element : elementy) {
+                    System.out.println(element);
+                }
+
             }
         } catch (FileNotFoundException e) {
             System.out.println("Problem z wczytaniem pliku...");
