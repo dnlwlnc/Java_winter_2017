@@ -26,5 +26,14 @@ public class PlikiWy {
         bw.write("Trzecia linia po znaku konca linii\n");
         bw.write("Linia #4");
         bw.close(); fw.close();
+
+        /*
+        Praca domowa (bedzie opisana na github)
+
+        Sciagnac kilka indeksow gieldowych roznych firm i dodac kolumne wzrostu kursu akcji (close-open)/open
+        - prasowanie String na int
+
+
+         */
     }
 }
