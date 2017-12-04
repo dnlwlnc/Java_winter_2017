@@ -1,0 +1,2 @@
+Pierwsza liniaDruga linia bez znaku konca linii
+Trzecia linia po znaku konca linii
