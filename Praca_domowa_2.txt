@@ -1,0 +1,23 @@
+Do wyboru jedno z 2 zadañ (mo¿na dla æwiczenia zrobiæ obydwa :) )
+
+ZADANIE 1:
+1. Pobierz plik CSV zawieraj¹cy historyczne dane akcji np:
+http://finance.yahoo.com/q/hp?s=GOOG
+http://finance.yahoo.com/q/hp?s=IBM
+http://finance.yahoo.com/q/hp?s=MSFT
+
+Zapisz pliki w okreœlonym katalogu.
+
+2. Napisz program, który przeszukuje ten katalog i dla ka¿dego pliku
+tworzy nowy odpowiadaj¹cy jemu plik, w którym dodajemy now¹ kolumnê,
+która bêdzie zawieraæ wartoœæ procentowej zmiany kursu zgodnie ze wzorem:
+
+Change = (Close-Open)/Open
+
+ZADANIE 2:
+Napisz program, który sprawdza zapisany w formacie CSV stan gry w kó³ko
+i krzy¿yk i podaje wynik (czy jest wygrana i kto wygra³).
+
+PodpowiedŸ:
+Dla u³atwienia mo¿na przyj¹æ, ¿e X=-1 a O=1, a "zero" oznaczaæ bêdzie
+puste pole.

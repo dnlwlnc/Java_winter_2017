@@ -41,6 +41,5 @@ public class Pliki {
             file.list();
         }
 
-
     }
 }
