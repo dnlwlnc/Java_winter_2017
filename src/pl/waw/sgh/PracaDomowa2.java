@@ -20,14 +20,15 @@ public class PracaDomowa2 {
             if (dir.isDirectory()) {
                 File[] pliki = dir.listFiles();
                 for (File plik : pliki) {
-                    addChangeColumn(plik);
+                    if (getExtension(plik).equals(".csv") || getExtension(plik).equals(".CSV")) {
+                        addChangeColumn(plik);
+                    }
                 }
             }
 
         } catch (Exception e) {
             System.out.println("Wskazana ścieżka nie prowadzi do do folderu.");
         }
-
 
     }
 
@@ -72,22 +73,34 @@ public class PracaDomowa2 {
 
         System.out.println(createOutputFileName(inputFile));
     }
+
     public static String createOutputFileName(File inputFile) {
-        String inputName;
+        String inputName = inputFile.getName().toString();
+        String inputPath = inputFile.getAbsolutePath().toString();
         String fileExtension;
         String outputName;
+        String outputPath;
         if (inputFile.exists()) {
-            inputName = inputFile.getName().toString();
-            fileExtension = inputName.substring(inputName.lastIndexOf("."), inputName.length());
+            //inputName = inputFile.getName().toString();
+            fileExtension = getExtension(inputFile);
         } else {
             return "Plik nie istnieje";
         }
 
-        if (fileExtension.equals(".csv")) {
-            outputName = inputName.substring(0, inputName.lastIndexOf(".")).concat("_1.csv");
-            return outputName;
+        if (fileExtension.equals(".csv") || fileExtension.equals(".CSV")) {
+            //outputName = inputName.substring(0, inputName.lastIndexOf(".")).concat("_1.csv");
+            outputPath = inputPath.substring(0, inputPath.lastIndexOf(".")).concat("_1.csv");
+            //return outputName;
+            return outputPath;
         } else {
             return "Plik nie jest plikiem *.csv";
         }
+    }
+
+    public static String getExtension(File input) {
+        String fileName = input.getName().toString();
+        String extension = fileName.substring(fileName.lastIndexOf("."), fileName.length());
+
+        return extension;
     }
 }
