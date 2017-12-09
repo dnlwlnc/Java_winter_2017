@@ -87,6 +87,8 @@ public class PracaDomowa2 {
             return "Plik nie istnieje";
         }
 
+        // Można użyć metody replace zamiast robić to łopatologicznie
+
         if (fileExtension.equals(".csv") || fileExtension.equals(".CSV")) {
             //outputName = inputName.substring(0, inputName.lastIndexOf(".")).concat("_1.csv");
             outputPath = inputPath.substring(0, inputPath.lastIndexOf(".")).concat("_1.csv");
