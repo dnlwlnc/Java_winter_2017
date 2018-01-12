@@ -37,6 +37,6 @@ public abstract class Figura {
     public String toString() {
         return super.toString() +
                 " Figura o parametrach A=" + parA +
-                " i B=" + parB;
+                " i B=" + parB + " i C=" + parC;
     }
 }

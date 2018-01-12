@@ -8,6 +8,6 @@ public class Kwadrat extends Figura {
 
     @Override
     public double policzPole() {
-        return parA*parA;
+        return Math.pow(parA,2);
     }
 }

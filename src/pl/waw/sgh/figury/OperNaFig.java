@@ -13,7 +13,7 @@ public class OperNaFig {
         // NOWE FIGURY
         Kwadrat square = new Kwadrat(5);
         System.out.println("Kwadrat: " + square + ". Pole: " + square.policzPole());
-        Trojkat triangle = new Trojkat(3, 5, 8);
+        Trojkat triangle = new Trojkat(5, 6, 7);
         System.out.println("Trojkat: " + triangle + ". Pole: " + triangle.policzPole());
         TrojkatRownoboczny eqTriangle = new TrojkatRownoboczny(5);
         System.out.println("Trojkat rownoboczny: " + eqTriangle + ". Pole: " + eqTriangle.policzPole());
