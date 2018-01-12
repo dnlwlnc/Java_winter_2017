@@ -80,6 +80,7 @@ public class PracaDomowa2 {
         String fileExtension;
         String outputName;
         String outputPath;
+
         if (inputFile.exists()) {
             //inputName = inputFile.getName().toString();
             fileExtension = getExtension(inputFile);
