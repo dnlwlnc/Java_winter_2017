@@ -15,9 +15,19 @@ public abstract class Konto {
         this.klient = klient;
     }
 
-    @Override
+/*    @Override
     public String toString() {
         return "Konto{" +
+                "kontoId=" + kontoId +
+                ", waluta='" + waluta + '\'' +
+                ", stan=" + stan +
+                ", klient=" + klient +
+                '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "(" +
                 "kontoId=" + kontoId +
                 ", waluta='" + waluta + '\'' +
                 ", stan=" + stan +
