@@ -1,5 +1,7 @@
 package pl.waw.sgh.figury;
 
+import java.util.*;
+
 public class OperNaFig {
     public static void main(String[] args) {
 
@@ -25,8 +27,17 @@ public class OperNaFig {
         tabFig[3] = triangle;
         tabFig[4] = eqTriangle;
 
-
         for (Figura f : tabFig) {
+            System.out.println(f + " " + f.policzPole());
+        }
+
+//        Set<Figura> figuraSet = new HashSet<>();
+//        figuraSet.addAll(Arrays.asList(tabFig));
+
+        Arrays.sort(tabFig);
+        List<Figura> figuraList = new ArrayList<>();
+        figuraList.addAll(Arrays.asList(tabFig));
+        for (Figura f : figuraList) {
             System.out.println(f + " " + f.policzPole());
         }
     }
