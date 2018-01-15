@@ -15,12 +15,17 @@ public class OperNaBanku {
         // IFELSE na sytuacje wyjatkowe -> konto nie istnieje, nie ma srodkow, itd.
         // ZNALEZIENIE konta z listy
 
+
+        // TESTOWANIE UZNANIA I OBCIAZENI
+
         acc1.uznanie(50);
         System.out.println(acc1.stanKonta());
 
         acc1.obciazenie(60);
         System.out.println(acc1.stanKonta());
         System.out.println(acc2.stanKonta());
+
+        // TESTOWANIE PRZELEWU
 
         System.out.println(acc1.getKontoId() + " " + acc2.getKontoId());
 
