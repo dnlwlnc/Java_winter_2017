@@ -6,7 +6,7 @@ import java.util.List;
 public class Przedmiot {
     private String nazwa;
     private int idPrzedmiotu;
-    private int counter;
+    private int licznik;
     private int limitMiejsc;
     private static List<Przedmiot> wszystkiePrzedmioty = new ArrayList<>();
     private int idWykladowcy;
@@ -14,11 +14,11 @@ public class Przedmiot {
     Przedmiot(String nazwa, int limitMiejsc, Wykladowca w) {
         if (w.getLimitWykladowcy() != 0){
             this.nazwa = nazwa;
-            this.idPrzedmiotu = counter;
-            counter++;
+            this.idPrzedmiotu = licznik;
+            licznik++;
             this.limitMiejsc = limitMiejsc;
             this.wszystkiePrzedmioty.add(this);
-            w.getProwadzonePrzedmioty().add(this);
+            w.getPrzedmiotyWykladowcy().add(this);
             w.setLimitWykladowcy(w.getLimitWykladowcy()-1);
             this.idWykladowcy = w.getIdWykladowcy();
         }else {
@@ -45,12 +45,12 @@ public class Przedmiot {
         this.idPrzedmiotu = idPrzedmiotu;
     }
 
-    public int getCounter() {
-        return counter;
+    public int getLicznik() {
+        return licznik;
     }
 
-    public void setCounter(int counter) {
-        this.counter = counter;
+    public void setLicznik(int licznik) {
+        this.licznik = licznik;
     }
 
     public int getLimitMiejsc() {

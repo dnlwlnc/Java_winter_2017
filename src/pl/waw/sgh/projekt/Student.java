@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Student extends Osoba {
     private int idStudenta;
-    private int counter;
+    private int licznik;
     private double sredniaOcen;
     public List<Przedmiot> przedmiotyStudenta;
     private static List<Student> wszyscyStudenci = new ArrayList<>();
@@ -13,8 +13,8 @@ public class Student extends Osoba {
 
     Student(String imie, String nazwisko, Date birthday) {
         super(imie, nazwisko, birthday);
-        this.idStudenta = counter;
-        counter++;
+        this.idStudenta = licznik;
+        licznik++;
         this.sredniaOcen = 0;
         this.przedmiotyStudenta = new ArrayList<>();
         this.oceny = new HashMap<>();
@@ -26,8 +26,8 @@ public class Student extends Osoba {
     public void zapiszNaPrzedmiot(Przedmiot p, Wykladowca w){
         boolean prowadziPrzedmiot = false;
 
-        for (int i = 0; i < w.getProwadzonePrzedmioty().size(); i++){
-            if (w.getProwadzonePrzedmioty().get(i).getNazwa().equals(p.getNazwa())){
+        for (int i = 0; i < w.getPrzedmiotyWykladowcy().size(); i++){
+            if (w.getPrzedmiotyWykladowcy().get(i).getNazwa().equals(p.getNazwa())){
                 prowadziPrzedmiot = true;
             }
         }
@@ -125,12 +125,12 @@ public class Student extends Osoba {
         this.idStudenta = idStudenta;
     }
 
-    public int getCounter() {
-        return counter;
+    public int getLicznik() {
+        return licznik;
     }
 
-    public void setCounter(int counter) {
-        this.counter = counter;
+    public void setLicznik(int licznik) {
+        this.licznik = licznik;
     }
 
     public double getSredniaOcen() {

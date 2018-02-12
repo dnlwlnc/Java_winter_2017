@@ -6,7 +6,7 @@ public class Wykladowca extends Osoba {
     private int idWykladowcy;
     private static int counter;
     private static int limitWykladowcy;
-    private List<Przedmiot> prowadzonePrzedmioty;
+    private List<Przedmiot> przedmiotyWykladowcy;
     private static List<Wykladowca> wszyscyWykladowcy = new ArrayList<>();
     private  Map<String, Boolean> skrzynkaOdbiorcza = new HashMap<>();
 
@@ -16,7 +16,7 @@ public class Wykladowca extends Osoba {
         counter++;
         limitWykladowcy = 5;
         wszyscyWykladowcy.add(this);
-        this.prowadzonePrzedmioty = new ArrayList<>();
+        this.przedmiotyWykladowcy = new ArrayList<>();
         this.skrzynkaOdbiorcza = new HashMap<>();
     }
 
@@ -79,12 +79,12 @@ public class Wykladowca extends Osoba {
         Wykladowca.counter = counter;
     }
 
-    public List<Przedmiot> getProwadzonePrzedmioty() {
-        return prowadzonePrzedmioty;
+    public List<Przedmiot> getPrzedmiotyWykladowcy() {
+        return przedmiotyWykladowcy;
     }
 
-    public void setProwadzonePrzedmioty(List<Przedmiot> prowadzonePrzedmioty) {
-        this.prowadzonePrzedmioty = prowadzonePrzedmioty;
+    public void setPrzedmiotyWykladowcy(List<Przedmiot> przedmiotyWykladowcy) {
+        this.przedmiotyWykladowcy = przedmiotyWykladowcy;
     }
 
     public static List<Wykladowca> getWszyscyWykladowcy() {

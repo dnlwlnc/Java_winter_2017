@@ -5,12 +5,12 @@ import java.util.Date;
 public abstract class Osoba {
     private String imie;
     private String nazwisko;
-    private Date birthday;
+    private Date urodziny;
 
-    Osoba(String imie, String nazwisko, Date birthday) {
+    Osoba(String imie, String nazwisko, Date urodziny) {
         this.imie=imie;
         this.nazwisko=nazwisko;
-        this.birthday=birthday;
+        this.urodziny = urodziny;
     }
 
     public String getImie() {
@@ -29,12 +29,12 @@ public abstract class Osoba {
         this.nazwisko = nazwisko;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Date getUrodziny() {
+        return urodziny;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setUrodziny(Date urodziny) {
+        this.urodziny = urodziny;
     }
 
 }
